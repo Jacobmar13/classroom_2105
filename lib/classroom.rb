@@ -19,4 +19,8 @@ class Classroom
   def over_capacity?
     @capacity < @students.length
   end
+
+  def kick_out
+    @students.delete_at(0)
+  end
 end

@@ -86,11 +86,8 @@ describe Classroom do
       classroom.add_student('Alice')
 
       classroom.kick_out
-
       expect(classroom.over_capacity?).to eq(true)
-
       classroom.kick_out
-
       expect(classroom.over_capacity?).to eq(false)
       expect(classroom.students).to eq(["Bob", "James", "Cat", "Alice"])
     end
